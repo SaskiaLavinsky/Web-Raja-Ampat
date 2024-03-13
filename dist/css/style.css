@@ -1,0 +1,686 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 120px;
+    background: linear-gradient(135deg, rgb(253, 254, 255) 0%, rgb(170, 173, 189) 100%);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    overflow-y: hidden;
+  }
+  
+  nav a {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: rgba(255,255,255,.75);
+  }
+  
+/* NAVBAR */
+
+/* HOME */
+#home {
+    position: relative;
+}
+
+#static-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    z-index: 2; 
+}
+
+#static-text p{
+    font-size: 16px;
+}
+
+#slideshow {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.slide {
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide-wrapper {
+    width: calc(400vw);
+    animation: slide 15s ease infinite;
+    display: flex;
+}
+
+.slide img {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0.5);
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    
+    20% {
+        margin-left: calc(-100vw * 0);
+    }
+    
+    40% {
+        margin-left: calc(-100vw * 1);
+    }
+    
+    60% {
+        margin-left: calc(-100vw * 2);
+    }
+    
+    80% {
+        margin-left: calc(-100vw * 3);
+    }
+}
+/* HOME */
+
+/* abaout us */
+
+.aboutus{
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0 ;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+    padding-bottom: 70px;
+}
+.bg {
+    background:linear-gradient(rgba(0, 0, 0, 0.0), 
+    rgb(237, 236, 236)), url('../../image/sea.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    width: 100vw;
+    transform: scaleY(-1);
+}
+
+
+
+
+.aboutus h3{
+    font-size: 55px;
+    color: #333;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.abt-text2{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.abt-box p{
+    font-size: 18px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+.abt-box{
+    width: 750px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(235deg, rgb(178, 188, 195) 0%, rgb(137, 141, 163) 100%);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    overflow-y:hidden;
+}
+/* abaout us */
+
+/* information */
+
+.activity-box{
+    gap: 100px;
+    row-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 200px;
+    transform: scale(0.8);
+  }
+  
+  .information{
+    min-height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+  }
+  
+  .allinfo{
+    padding-top: 100px;
+    overflow-y: hidden;
+  }
+  
+  .titleinfo h1{
+    font-size: 50px;
+    color: #fff;
+  }
+  
+  .wrapinfo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 100px;
+    padding: 40px 100px;
+  }
+  
+  .cardinfo{
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%,
+     rgba(136, 139, 152, 0.625) 100%);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: 0.5s;
+    overflow: visible;
+  }
+
+  .wrapinfo .cardinfo {
+    position: relative; 
+  }
+  
+  .cardinfo:hover{
+    height: 350px;
+  }
+  
+  .imginfo{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    transition: 0.5s;
+    transform: scale(1);
+  }
+  
+  .wrapinfo .cardinfo:hover .imginfo{
+    top: -100px;
+    scale: 0.9;
+    
+  }
+  
+  .imginfo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wrapinfo .cardinfo:hover .imginfo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .contentinfo{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+  }
+  
+  .wrapinfo .cardinfo:hover .contentinfo{
+    top: 130px;
+    height: 250px;
+  }
+  
+  .contentinfo h2{
+    color: #f0f0f0;
+    text-shadow: 1px 1px 1px #333;
+  }
+  
+  .contentinfo h4{
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+    text-align: center;
+  }
+  .contentinfo h5{
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+    font-weight:300;
+    color: #fff;
+    text-shadow: 1px 1px 1px #333;
+  }
+
+  
+  .contentinfo p{
+    color: rgb(9, 88, 3);
+    font-weight: 1000;
+    margin: 10px;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  
+  .contentinfo a{
+    position: relative;
+    top: 15px;
+    display: inline block;
+    padding: 12px 25px;
+    background: var(--clr);
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .titleinfo{
+    font-size: 50px;
+    margin-top: 30px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+/* information */
+
+/* activities */
+.activities{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+  
+.allact{
+    background-color: #f0f0f0;
+    
+}
+.activity-box{
+    margin-top: 0px;
+}
+
+.box a {
+    color: #f0f0f0; 
+    text-decoration: none; 
+  }
+  
+  .box a:hover {
+    color: #ffffff;
+  }
+  
+
+.allact h1{
+    font-size: 52px;
+    margin-top: 30px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5,
+  .box6{
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 330px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin-top: 40px;
+  }
+  
+  .box1::before,
+  .box2::before,
+  .box3::before,
+  .box4::before,
+  .box5::before,
+  .box6::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: transform 0.9s ease-in-out;
+  }
+  
+  .box1:hover::before,
+  .box2:hover::before,
+  .box3:hover::before,
+  .box4:hover::before,
+  .box5:hover::before,
+  .box6:hover::before{
+    transform: scale(1.1) ;
+  }
+  
+  .box1::before {
+    background:linear-gradient(rgba(0, 0, 0, 0.4), 
+        rgba(19, 19, 19, 0.655)), url('../../image/Piaynemo\ Island.jpeg');
+    background-size: cover;
+  }
+  
+  .box2::before{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), 
+        rgba(19, 19, 19, 0.655)), url('../../image/Pulau\ Misool.jpeg');
+    background-size: cover;
+  }
+  
+  .box3::before{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), 
+        rgba(19, 19, 19, 0.655)), url('../../image/wajag.jpeg');
+    background-size: cover;
+  }
+  
+  .box4::before{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), 
+        rgba(19, 19, 19, 0.655)), url('../../image/batupensil.jpeg');
+    background-size: cover;
+  }
+  
+  .box5::before{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), 
+        rgba(19, 19, 19, 0.655)), url('../../image/star\ lagoon.jpeg');
+    background-size: cover;
+  }
+  
+  .box6::before{
+    background:linear-gradient(rgba(0, 0, 0, 0.4), 
+        rgba(19, 19, 19, 0.655)), url('../../image/Pasir\ Timbul.jpeg');
+    background-size: cover;
+  }
+
+  .box{
+    text-shadow: 2px 2px 7px #000000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+    overflow-y: hidden;
+  }
+  
+  .box h2{
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 80px;
+    font-size: 30px;
+  }
+  
+  .box p{
+    margin-top: -10px;
+    font-size: 20px;
+  } 
+  
+  .box h5{
+    margin-top: 0px;
+    font-size: 22px;
+  }
+  
+  .box h6{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: large;
+  }
+/* activities */
+
+/* REVIEWS */
+
+.reviews{
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #cccccc;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700; 
+    padding-top: 10%;
+  }
+  
+  
+  .kotakkiri {
+  flex: 0 0 45%;
+  margin-right: 20px; 
+  padding-left: 10%;
+  }
+  
+  .kotakkanan {
+  flex-wrap: wrap;
+  width: 100%;
+  flex: 0 0 45%; 
+  }
+  
+  
+  
+  .kotakkiri form {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .kotakkiri label {
+  margin-bottom: 8px;
+  }
+  
+  .kotakkiri input{
+  border-radius: 5px;
+  border: 0;
+  }
+  
+  .kotakkiri input:hover{
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
+  }
+  
+  .kotakkiri textarea {
+  height: 100px;
+  resize: vertical;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 0;
+  }
+  
+  .kotakkiri textarea:hover{
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
+  }
+  
+  .kotakkiri button {
+  width: 200px;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000000;
+  }
+  
+  .kotakkiri button:hover {
+  background-color: #45a049;
+  }
+  
+  .kotakkanan ul {
+  list-style: none;
+  padding-left: 0;
+  }
+  
+  .kotakkanan li {
+  margin-bottom: 10px;
+  }
+  
+  .box-kanan{
+  background: #fff;
+  width: 450px;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-top: -20px;
+  }
+  
+  .profile-img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-left: 20px;
+  
+  }
+  
+  .profile-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  }
+  
+  .box-top{
+  display: flex;
+  align-items: center;
+  }
+  
+  .profile-name{
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .profile-name strong{
+  color: #3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  justify-content: left;
+  }
+  
+  .review-text{
+  margin-left: 40px;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: justify;
+  }
+  
+  
+  /* FOOTER */
+  
+  footer {
+      background-color: #333;
+      color: #fff;
+      padding: 150px 30px;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      height: 100px;
+      overflow-y: hidden;
+    }
+    
+    .container{
+      margin-top: -100px;
+    }
+    
+    .company-info h3 {
+      font-size: 24px;
+    }
+    
+    .address-info h4,
+    .social-media h4 {
+      margin-bottom: 20px;
+    }
+    
+    .social-media ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .social-media li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    
+    .social-media a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+  
+
+@media screen and (max-width: 800px) {
+
+    .aboutus h3{
+        font-size: 35px;
+    }
+
+    .abt-box p{
+        font-size: 15px;
+    }
+
+    .abt-box {
+        width: 500px;
+    }
+}
